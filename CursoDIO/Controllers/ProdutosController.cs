@@ -47,7 +47,7 @@ namespace CursoDIO.Controllers
         // GET: Produtos/Create
         public IActionResult Create()
         {
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "id");
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "Descricao");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace CursoDIO.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "id", produto.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "Descricao", produto.CategoriaId);
             return View(produto);
         }
 
@@ -81,7 +81,7 @@ namespace CursoDIO.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "id", produto.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "Descricao", produto.CategoriaId);
             return View(produto);
         }
 
@@ -117,7 +117,7 @@ namespace CursoDIO.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "id", produto.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "id", "Descricao", produto.CategoriaId);
             return View(produto);
         }
 
