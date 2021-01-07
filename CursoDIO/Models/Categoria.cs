@@ -10,8 +10,8 @@ namespace CursoDIO.Models
 	{
 		public int id { get; set; }
 		[Display(Name = "Descrição")]
-		[Required(ErrorMessage ="Campo Obrigátorio")]
+		[Required(ErrorMessage = "Campo Obrigátorio")]
 		public string Descricao { get; set; }
-		public List<Produto> Produtos { get; set; }
+		// public List<Produto> Produtos { get; set; }
 	}
 }

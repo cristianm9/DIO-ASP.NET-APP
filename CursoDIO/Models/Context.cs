@@ -16,5 +16,9 @@ namespace CursoDIO.Models
 			optionsBuilder.UseSqlServer(connectionString: @"Server=(localdb)\mssqllocaldb;Database=CursoDIO;Integrated Security=True");
 		}
 
+		public void SetModified(object entity)
+		{
+			Entry(entity).State = EntityState.Modified;
+		}
 	}
 }
